@@ -1,1232 +1,161 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2022.2">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 12.0px Menlo; color: #1b1f22; -webkit-text-stroke: #1b1f22}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: right; line-height: 20.0px; font: 12.0px Menlo; color: #1b1f22; -webkit-text-stroke: #1b1f22; min-height: 14.0px}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 12.0px Menlo; color: #1b1f22; -webkit-text-stroke: #1b1f22; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-    span.Apple-tab-span {white-space:pre}
-    table.t1 {background-color: #ffffff; border-collapse: collapse}
-    td.td1 {width: 135.6px; padding: 0.0px 10.0px 0.0px 10.0px}
-    td.td2 {width: 135.6px; min-width: 50.0px; padding: 0.0px 10.0px 0.0px 10.0px}
-    td.td3 {width: 3682.9px; padding: 0.0px 10.0px 0.0px 10.0px}
-  </style>
-</head>
+<!DOCTYPE html> 
+<html> 
+<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative Maker Space Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the Maker Space Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+ 
+THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION IN ANY FORM OR FASHION.
+ 
+ 
+Authors in chronological order of contribution:
+Tim Riedel
+Anish Maddipoti
+ 
+Further Information:
+http://cns.utexas.edu/fri
+ 
+Research Educator:
+Timothy Riedel
+triedel@utexas.edu
+ 
+Brief Description of Goal of Code:
+To help user diagnose their sypmtoms as either cold or allergies,
+ 
+Known Issues:
+N/A
+-->
+    
+   <head> 
+      <title>Hello World</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+
+<style> 
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
 <body>
-<table cellspacing="0" cellpadding="0" class="t1">
-  <tbody>
-    <tr>
-      <td valign="top" class="td1">
-        <p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;<span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;html&gt;<span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.<span class="Apple-converted-space">  </span>This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.<span class="Apple-converted-space">  </span>Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">Authors in chronological order of contribution:</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">Tim Riedel</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">Author 2</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">Further Information:</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">http://cns.utexas.edu/fri</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">Research Educator:</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">Timothy Riedel</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">triedel@utexas.edu</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">Brief Description of Goal of Code:</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">blah, blah, blah,</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">Known Issues:</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">blah, blah, blah, blah</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">https://www.w3schools.com/w3css/default.asp</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">--&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;head&gt;<span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;title&gt;Hello World&lt;/title&gt; <span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;link rel="stylesheet" href="w3.css"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;link rel="stylesheet" href="w3-colors-flat.css"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;/head&gt;<span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;script&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>var allergy_count = 0;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>var cold_count = 0;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function allergyAdd(){</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>allergy_count = allergy_count + 1;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function coldAdd(){</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>cold_count = cold_count + 1;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function results(){</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>var resultText = document.getElementById("results");</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>resultText.innerHTML = "Probability it is allergies = " +<span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>str(1.0*allergy_count/4) + "Probability it is a cold =" + str(1.0*cold_count/4);<span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;/script&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;style&gt;<span class="Apple-tab-span">	</span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">.body {</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>margin: 0em;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">}</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">.page {</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 100vw;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>height: 100vh;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: fixed;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>top: 0;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>left: -100vw;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>overflow-y: auto;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>z-index: 0;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: hsl(0,0%,100%);</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">}</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.page:target {</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>left: 0vw;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>z-index: 1;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">}</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;/style&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;body&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;div id="header" class="w3-container w3-flat-carrot"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;h1&gt;Cold or Allergies?&lt;/h1&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;div id="content" class="w3-container"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;p&gt;Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!&lt;/p&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;a href="#one" class="w3-btn w3-grey w3-round"&gt; Get Started &lt;/a&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;p&gt;The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>Austin.<span class="Apple-converted-space">  </span>This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.&lt;/p&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-converted-space"> <span class="Apple-tab-span">	</span></span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;p&gt;THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.&lt;/p&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;div class="page" id="one"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;div id="header" class="w3-container w3-flat-carrot"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;h1&gt;Question 1&lt;/h1&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>&lt;div id="content" class="w3-container"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Are your eyes watery or itchy?&lt;/p&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#two"<span class="Apple-converted-space">  </span>onclick="allergyAdd();" class="w3-btn w3-black"&gt; Yes&lt;/a&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#two" onclick="coldAdd();" class="w3-button w3-black"&gt;No&lt;/a&gt;<span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;div class="page" id="two"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;div id="header" class="w3-container w3-flat-carrot"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;h1&gt;Question 2&lt;/h1&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;div id="content" class="w3-container"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Do you have a fever?&lt;/p&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#three"<span class="Apple-converted-space">  </span>onclick="coldAdd();" class="w3-button w3-black"&gt;Yes&lt;/a&gt;<span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#three" onclick="allergyAdd();" class="w3-button w3-black"&gt;No&lt;/a&gt;<span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;/div&gt;<span class="Apple-tab-span">	</span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;div class="page" id="three"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;div id="header" class="w3-container w3-flat-carrot"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;h1&gt;Question 3&lt;/h1&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;div id="content" class="w3-container"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Do you have a sore throat?&lt;/p&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#four" onclick="coldAdd();" class="w3-button w3-black"&gt;Yes&lt;/a&gt;<span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#four" onclick="allergyAdd();" class="w3-button w3-black"&gt;No&lt;/a&gt;<span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;div class="page" id="four"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;div id="header" class="w3-container w3-flat-carrot"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;h1&gt;Question 4&lt;/h1&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;div id="content" class="w3-container"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Are your symptoms seasonal or chronic?&lt;/p&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#results" onclick="allergyAdd();" class="w3-button w3-black"&gt;Yes&lt;/a&gt;<span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#results" onclick="coldAdd();" class="w3-button w3-black"&gt;No&lt;/a&gt;<span class="Apple-converted-space"> </span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;div class="page" id="results"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;div id="header" class="w3-container w3-flat-carrot"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;h1&gt;Results&lt;/h1&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;div id="content" class="w3-container"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p id="results"&gt;the results are&lt;/p&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;footer class="w3-bottom w3-container w3-flat-carrot"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>&lt;p&gt;DIY!&lt;/p&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;/footer&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td3">
-        <p class="p3"><span class="s1"></span><br></p>
-        <p class="p3"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="top" class="td3">
-        <p class="p1"><span class="s1">&lt;/html&gt;</span></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div id="header" class="w3-container w3-flat-carrot">
+    <h1>Cold or Allergies?</h1>
+</div>
+    
+<div id="content" class="w3-container">
+    <p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+    
+    <a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+    
+    <p>The following code has been developed by students and/or researchers of the Freshman Research Initiative Maker Space Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the Maker Space Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+    
+    <p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<div class="page" id="one">                                                                           //Transitions to the first page
+    <div id="header" class="w3-container w3-flat-carrot">
+        <h1>Question 1</h1>                                                                           //Title of the first page
+    </div>
+    
+        <div id="content" class="w3-container">
+        <p>Are your eyes watery or itchy?</p>                                                         //Question asks if user's eyes are watery or itchy 
+        <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>                      //Response to question yes adds 1 to allergy_count
+        <a href="#two" onclick="coldAdd();" class="w3-button w3-black">No</a>                         //Response to question no adds 1 to cold_count
+        </div>
+</div>
+
+<div class="page" id="two">                                                                           //Transitions to the second page
+    <div id="header" class="w3-container w3-flat-carrot">
+        <h1>Question 2</h1>                                                                           //Title of the second page
+    </div>
+    
+    <div id="content" class="w3-container">
+        <p>Do you have a fever?</p>                                                                   //Question asks if user has fever
+        <a href="#three"  onclick="coldAdd();" class="w3-button w3-black">Yes</a>                     //Response to question yes adds 1 to cold_count  
+        <a href="#three" onclick="allergyAdd();" class="w3-button w3-black">No</a>                    //Response to question no adds 1 to allergy_count
+    </div>
+</div>  
+
+<div class="page" id="three">                                                                         //Transitions to the third page
+    <div id="header" class="w3-container w3-flat-carrot">
+        <h1>Question 3</h1>                                                                           //Title of the third page
+    </div>
+    
+    <div id="content" class="w3-container">
+        <p>Do you have a sore throat?</p>                                                             //Question asks if user has sore throat
+        <a href="#four" onclick="coldAdd();" class="w3-button w3-black">Yes</a>                       //Response to question yes adds 1 to cold_count
+        <a href="#four" onclick="allergyAdd();" class="w3-button w3-black">No</a>                     //Response to question no adds 1 to allergy_count
+    </div>
+</div>
+
+<div class="page" id="four">                                                                          //Transitions to the fourth page
+    <div id="header" class="w3-container w3-flat-carrot">
+        <h1>Question 4</h1>                                                                           //Title of the fourth page
+    </div>
+    
+    <div id="content" class="w3-container">
+        <p>Are your symptoms seasonal or chronic?</p>                                                 //Question asks if user's symptom are seasonal or chronic
+        <a href="#five" onclick="allergyAdd();" class="w3-button w3-black">Yes</a>                    //Response to question yes adds 1 to allergy_count
+        <a href="#five" onclick="coldAdd();" class="w3-button w3-black">No</a>                        //Response to question no adds 1 to cold_count
+    </div>
+</div>
+    
+<div class="page" id="five">
+    <div id="header" class="w3-container w3-flat-carrot">
+        <h1>Results</h1>
+    </div>
+    
+    <div id="content" class="w3-container">
+        <p>Get results?</p>                                                                           //Produces results when clicked on
+        <a href="#results" onclick="results();" class="w3-button w3-black">Yes</a> 
+    </div>
+</div>
+
+<div class="page" id="results">                                                                       //Transitions to the results page 
+    <div id="header" class="w3-container w3-flat-carrot">
+        <h1>Results</h1>                                                                              //Title of the results page
+    </div>
+    
+    <div id="content" class="w3-container">
+        <p id="ret">the results are</p>
+    </div>
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+    <p>Anish is cool!</p>
+</footer>
+
 </body>
+<script>
+    var allergy_count = 0;                 //Keeps track of the number of allergy related responses
+    var cold_count = 0;                    //Keeps track of the number of cold related responses
+
+    function allergyAdd(){
+        allergy_count = allergy_count + 1; //Increments the allergy_count when allergy related questions are answered yes
+    }
+
+    function coldAdd(){
+        cold_count = cold_count + 1;       //Increments the cold_count when cold related questions are answered yes
+    }
+
+    function results(){                    //Called when user presses 'show results'
+        var resultText = document.getElementById("ret"); //Locates element called 'ret' to display results
+        resultText.innerHTML = "Probability it is allergies = " + 
+        (100.0*allergy_count/4).toString() + "Probability it is a cold = " + (100.0*cold_count/4.0).toString(); //Calculates allergy and cold precentages and appends them to a string
+    }
+</script>
 </html>
